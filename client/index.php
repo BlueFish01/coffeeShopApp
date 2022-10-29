@@ -3,7 +3,6 @@
 
     $request = $_SERVER['REQUEST_URI'];
 
-    session_start();
     
     switch ($request) {
 
