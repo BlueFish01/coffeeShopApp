@@ -34,6 +34,30 @@
             $q = mysqli_query($this->dbcon,"SELECT USER_ID, USER_NAME, USER_FNAME, USER_EMAIL FROM user WHERE USER_NAME = '$uname' AND USER_PASS = '$passwd'");
             return $q;
         }
+        
+        public function getMenu($category){
+            $q = mysqli_query($this->dbcon,"SELECT * FROM menu");
+            $num = mysqli_num_rows($q);
+            if($num>0){
+                while($data=mysqli_fetch_assoc($q)){
+                    if($data['category']==$category){
+                        
+                        echo '  <div class="row_container">
+                                    <div class="row">
+                                        <img src="image/'.$data["img_dir"].'" alt="">
+                                        <h2> 
+                                            '.$data["Name"].'<br>
+                                            <span>'.$data["Description"].'</span>
+                                        </h2>
+                                        <h1>฿'.$data["Price"].'</h1>
+                                    </div>
+                                </div> ';
+                    }
+                }
+            }
+            return;
+        }
+
 
        
     }

@@ -1,8 +1,11 @@
 <?php
 
     session_start();
+    include_once('dbconnect.php');
+    $db = new db();
 
-   if($_SESSION['USER_ID']==""){
+    
+    if($_SESSION['USER_ID']==""){
         header("Location: /");
     }else{
 ?>
@@ -29,14 +32,14 @@
             <nav class="nev_bar">
                 <h1>Good Morning</h1>            
                 <i class="bi bi-list"></i>
-                <i class="bi bi-bag"></i>
             </nav>
 
         </header>
         <body class="home-bg">
              
             <div class="main-content">
-
+                <h2>PROMOTION</h2>
+                
                 <!-- Promotion Card--> 
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
@@ -52,6 +55,28 @@
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
+
+                <!-- Product list -->
+                <h2>COFFEE</h2>
+                    <div class="product_list">
+                    <!--list manu in Espresso category--->
+                        <?php 
+                            $menu = $db->getMenu('Espresso');
+                        ?>
+                    </div>
+                <h2>TEA</h2>
+                    <div class="product_list">
+                    <!--list manu in Tea category--->
+                        <?php 
+                            $menu = $db->getMenu('Tea');
+                        ?>
+                    </div>    
+                    
+                    
+                    
+                
+
+
 
                 <h1 class="mt-5">Welcome,<?php echo $_SESSION['USER_NAME'];?></h1>
                 
