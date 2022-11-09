@@ -3,8 +3,9 @@
 
     $request = $_SERVER['REQUEST_URI'];
 
+    $url = explode("?", $request);
     
-    switch ($request) {
+    switch ($url[0]) {
 
         case '':
         case '/':
@@ -17,6 +18,10 @@
 
         case '/register':
             require __DIR__ . '/register.php';
+            break;
+
+        case '/customDrink':
+            require __DIR__ . '/customDrink.php';
             break;
 
         case '/logout':

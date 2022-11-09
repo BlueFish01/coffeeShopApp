@@ -43,14 +43,16 @@
                     if($data['category']==$category){
                         
                         echo '  <div class="row_container">
-                                    <div class="row">
-                                        <img src="image/'.$data["img_dir"].'" alt="">
-                                        <h2> 
-                                            '.$data["Name"].'<br>
-                                            <span>'.$data["Description"].'</span>
-                                        </h2>
-                                        <h1>฿'.$data["Price"].'</h1>
-                                    </div>
+                                    <a href="/customDrink?id='.$data["ID"].'&name='.$data["Name"].'&img_dir='.$data["img_dir"].'&price='.$data["Price"].'&description='.$data["Description"].'">
+                                        <div class="row">
+                                            <img src="image/'.$data["img_dir"].'" alt="">
+                                            <h2> 
+                                                '.$data["Name"].'<br>
+                                                <span>'.$data["Description"].'</span>
+                                            </h2>
+                                            <h1>฿'.$data["Price"].'</h1>
+                                        </div>
+                                    </a>
                                 </div> ';
                     }
                 }

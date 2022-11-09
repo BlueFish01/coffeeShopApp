@@ -39,6 +39,7 @@
     height:100%;
     overflow-y: scroll;
     overflow-x: hidden;
+    overscroll-behavior: none;
 }
 
 .home-bg h2{
@@ -130,4 +131,18 @@
 
 .row_container{
     padding: 5px 15px;    
+}
+
+a{
+    border:none;
+    outline:none;
+    text-decoration:none;
+    color:inherit;
+}
+
+a:hover{
+    border:none;
+    outline:none;
+    text-decoration:none;
+    color:inherit;
 }
