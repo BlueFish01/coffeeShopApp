@@ -111,13 +111,43 @@
                 <textarea placeholder="Add a short note, We'll do our best to accommodate."></textarea>
             </div>
 
-            <div class="empty_area">
+            <div class="empty_area"></div>
 
-            </div>
-
+            <!--- add to cart button --->
             <div class="submit_order">
-                
+
+                <div class="stepperInput">
+                    <button class="button button--addOnLeft">-</button>
+                    <input type="number" value="1" class="input stepperInput__input"/>
+                    <button class="button button--addOnRight" >+</button>
+                </div>
+                <div class=submit_button>
+                    <input class="btn btn-primary" name="Add to cart" type="submit" value="Add to cart">
+                    <span>฿ 150</span>
+                </div>
             </div>
+
+            <script src="node_modules/jquery/dist/jquery.min.js"></script>
+            <script>
+                var $stepperInput = $('.stepperInput input');
+
+                function incrementStepperInput(amount) {
+                    $stepperInput.val((parseInt($stepperInput.val()) || 0) + amount);
+                }
+
+                var stepperInputDecrement = $('.stepperInput button')[0];
+                $(stepperInputDecrement).click(() => {
+                    if(parseInt($stepperInput.val())!=0){
+                        incrementStepperInput(-1);
+                    }
+                    
+                });
+
+                var stepperInputIncrement = $('.stepperInput button')[1];
+                $(stepperInputIncrement).click(() => {
+                    incrementStepperInput(1);
+                });
+            </script>
         </body>
         </html>
 

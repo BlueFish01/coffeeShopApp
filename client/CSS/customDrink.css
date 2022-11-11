@@ -179,15 +179,117 @@ h1 {
 
 .empty_area{
     width: 100%;
-    height: 170px;
+    height: 200px;
 }
 
 .submit_order{
     width: 100%;
-    height: 150px;
+    height: 200px;
     background-color: #ffffff;
     box-shadow: rgba(53, 56, 59, 0.541) 0px 10px 24px;
     position: fixed;
     bottom: 0px;
     z-index: 99;
+    padding: 15px 20px;
+}
+
+.btn-primary{
+    padding-left: 25px;
+    text-align: start;
+    width: 80%;
+    font-family:'Open Sans', sans-serif;
+    font-weight: 700;
+    border-radius: 0;
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+    border: none;
+}
+
+.btn-primary, .btn-primary:hover{
+    background-color: #7be495 !important;
+} 
+.btn-primary:active, .btn-primary:visited{
+    background-color: #7be495 !important;
+}
+
+.submit_button{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.submit_button span{
+    padding: 10px;
+    padding-left: 0;
+    text-align: center;
+    font-family:'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    width: 20%;
+    background-color: #7be495;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+.stepperInput {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+  
+  .stepperInput__input {
+      border-left: 0;
+      border-right: 0;
+      width: 60px;
+      text-align: center;
+}
+  
+.button {
+    
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    padding: 0 5px;
+    padding-bottom:35px;
+    background-color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin: 0 15px;
+    
+   
+}
+   
+.button--addOnLeft {
+    color: #929292;
+    border: 2px solid #929292;
+   
+}
+  
+.button--addOnRight {
+    color: #7be495;
+    border: 2px solid #7be495;
+    
+}
+.button--addOnLeft:active{
+
+    color: #666666;
+    border: 2px solid #666666;
+    transition: ease-in;
+    
+}
+.button--addOnRight:active{
+    color: #56C596;
+    border: 2px solid #56C596;
+    transition: ease-in;
+}
+  
+.input {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 10px;
+    border:none;
+    box-shadow: none;
 }
