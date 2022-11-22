@@ -5,9 +5,12 @@
     $db = new db();
 
     
+
+    
     if($_SESSION['USER_ID']==""){
         header("Location: /");
     }else{
+            
 ?>
 
         <!DOCTYPE html>
@@ -30,12 +33,31 @@
 
             <!-- nevber -->
             <nav class="nev_bar">
-                <h1>Good Morning</h1>            
-                <i class="bi bi-list"></i>
+                <h1>Good Morning<br><span style="font-size: 1.5rem;"><?php echo $_SESSION['USER_NAME'];?></span></h1>            
+                
+                <i class="bi bi-list" onclick="toggleMenu()"></i>
+                
+                <div class="sub_menu_warp" id="submenu">
+                    <div class="sub_menu">
+                        <a href="/orders" class="sub_menu_link">
+                            <h1>Orders</h1>
+                            <i class="bi bi-clock-history"></i>
+                        </a>
+                        <hr>
+                        <a href="/logout" class="sub_menu_link">
+                            <h1>logout</h1>
+                            <i class="bi bi-box-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </div>
             </nav>
 
         </header>
         <body class="home-bg">
+
+
+        
              
             <div class="main-content">
                 <h2>PROMOTION</h2>
@@ -70,19 +92,15 @@
                         <?php 
                             $menu = $db->getMenu('Tea');
                         ?>
-                    </div>    
-                    
-                    
-                    
+                    </div>
                 
-
-
-
-                <h1 class="mt-5">Welcome,<?php echo $_SESSION['USER_NAME'];?></h1>
-                
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing </p>
+                    
                 <hr>
-                <a href="/logout" class="btn btn-danger">Logout</a>
+                
+                <div class="emptyspace" id="empty_space" style="height:100px;" hidden="false"></div>
+                <div class="submit_order" id="cart" hidden="false">               
+                    <button onclick="window.location.href='/cart'"  class="btn btn-primary right">VIEW CART</button>
+                </div>
 
             </div>
             <!--swiper script-->
@@ -98,12 +116,28 @@
                         dynamicBullets: "true",
                     },
                 });
+                
+                let submenu = document.getElementById("submenu");
+
+                function toggleMenu(){
+                    submenu.classList.toggle("open-menu");
+                }
+
+
             </script>
 
         </body>
         </html>
 
 <?php
+
+        if($_SESSION['PriceTotal']==0){
+            echo "<script>document.getElementById('cart').hidden = ture</script>";
+            echo "<script>document.getElementById('empty_space').hidden = ture</script>";
+        }else{
+            echo "<script>document.getElementById('cart').hidden = false</script>";
+            echo "<script>document.getElementById('empty_space').hidden = false</script>";
+        }
 
     }
 

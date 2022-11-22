@@ -15,6 +15,7 @@
             $_SESSION['USER_NAME'] = $row['USER_NAME'];
             $_SESSION['USER_FNAME'] = $row['USER_FNAME'];
             $_SESSION['USER_EMAIL'] = $row['USER_EMAIL'];
+            $_SESSION['PriceTotal'] = 0;
             echo "<script>window.location.href='/home'</script>";
         }else{
             echo "<script>alert('your username or password are incorrect.')</script>";

@@ -60,6 +60,27 @@
             return;
         }
 
+        public function createOrder($customerID,$amount){
+            $q = mysqli_query($this->dbcon,"INSERT INTO drinkOrder (customerID,amount) VALUES('$customerID','$amount')");
+            $orderID = mysqli_insert_id($this->dbcon);
+            return $orderID;
+        }
+
+        public function createDrinkList($orderID,$menuID,$drinkOption,$size,$sugar,$qty,$comment,$price){
+            $q = mysqli_query($this->dbcon,"INSERT INTO drinkList(orderID, menuID, drinkOption, size, sugar, qty, comment, price) VALUES ('$orderID','$menuID','$drinkOption','$size','$sugar','$qty','$comment','$price')");
+            if(!$q){
+                
+                printf("Errormessage: %s\n", $this->dbcon->error);
+                 
+            }
+            return $q;
+        }
+
+        public function getOrdersHistory($customerID){
+            $q = mysqli_query($this->dbcon, "SELECT * FROM drinkOrder WHERE customerID=$customerID");
+            return $q;
+        }
+
 
        
     }
