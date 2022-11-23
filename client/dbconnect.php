@@ -77,8 +77,18 @@
         }
 
         public function getOrdersHistory($customerID){
-            $q = mysqli_query($this->dbcon, "SELECT * FROM drinkOrder WHERE customerID=$customerID");
-            return $q;
+            $q = mysqli_query($this->dbcon, "SELECT orderID,amount,DATE_FORMAT(date,'%Y-%b-%d %H:%i') AS fdate FROM drinkOrder WHERE customerID=$customerID ORDER BY orderID DESC");
+            $num = mysqli_num_rows($q);
+            if($num>0){
+                while($data=mysqli_fetch_assoc($q)){
+                    echo '  <div class="order_card">
+                                <span class="vertical-line"></span>
+                                <h2 style="width: 70%;">Order id : '.$data['orderID'].'<br><br>Date : '.$data['fdate'].'</h2>
+                                <h1 style="width: 30%; text-align:end; padding-right:15px">฿ '.$data['amount'].'</h1>
+                            </div>';
+                }
+            }
+            return;
         }
 
 

@@ -254,3 +254,11 @@
 .img_qr{
     padding: 0 10px;
 }
+
+.vertical-line{
+    width: 10px;
+    height: 100%;
+    color: #7be495;
+    background-color: #7be495;
+    border-radius: 5px;
+}

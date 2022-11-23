@@ -34,7 +34,18 @@
             </nav>
 
         </header>
-        <body>
+        <body class="home-bg">
+            <div class="orderlist" style="margin-top: 10px;">
+                <!-- <div class="order_card">
+                    <span class="vertical-line"></span>
+                    <h2>order id : 9<br><br>date</h2>
+                    <h1 style="width: 50%; text-align:end; padding-right:15px">฿ 245</h1>
+                </div> -->
+                <?php
+                    $order = $db->getOrdersHistory($_SESSION['USER_ID']);
+                ?>
+                
+            </div>
         
             
         </body>
