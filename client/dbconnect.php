@@ -77,7 +77,7 @@
         }
 
         public function getOrdersHistory($customerID){
-            $q = mysqli_query($this->dbcon, "SELECT orderID,amount,DATE_FORMAT(date,'%Y-%b-%d %H:%i') AS fdate FROM drinkOrder WHERE customerID=$customerID ORDER BY orderID DESC");
+            $q = mysqli_query($this->dbcon, "SELECT orderID,amount,DATE_FORMAT(date,'%Y-%b-%d %H:%i') AS fdate FROM drinkOrder WHERE customerID=$customerID ORDER BY orderID DESC LIMIT 10");
             $num = mysqli_num_rows($q);
             if($num>0){
                 while($data=mysqli_fetch_assoc($q)){

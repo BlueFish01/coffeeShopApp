@@ -66,10 +66,10 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="image/promotion1.png" alt="">
+                                <img src="image/promotion3.png" alt="">
                             </div>
                             <div class="swiper-slide">
-                                <img src="image/promotion1.png" alt="">
+                                <img src="image/promotion2.png" alt="">
                             </div>
                             <div class="swiper-slide">
                                 <img src="image/promotion1.png" alt="">

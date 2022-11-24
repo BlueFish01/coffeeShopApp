@@ -5,6 +5,7 @@
     if($_SESSION['USER_ID']==""){
         header("Location: /");
     }else{
+        
 
 ?>
     <!DOCTYPE html>
@@ -72,7 +73,8 @@
             foreach ($_SESSION['cart'] as $value) {
                 $drinkList = $db->createDrinkList($order,$value['product_id'],$value['option'],$value['size'],$value['suger'],$value['qty'],$value['comment'],$value['price']);
             }
-
+            
+        
             $_SESSION['PriceTotal'] = 0;
             unset($_SESSION['cart']);
             echo "<script>alert('Thank you for your order')</script>";
