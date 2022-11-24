@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `coffee_shop2`
+-- Database: `coffee_shop`
 --
-CREATE DATABASE IF NOT EXISTS `coffee_shop2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `coffee_shop2`;
+CREATE DATABASE IF NOT EXISTS `coffee_shop` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `coffee_shop`;
 
 -- --------------------------------------------------------
 
