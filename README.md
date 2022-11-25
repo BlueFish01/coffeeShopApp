@@ -23,7 +23,7 @@ to connect to database don’t forget to install php-MySQL
 phpmyadmin will be runing at
 <http://localhost:8080/>
 ## Start testing server
-Go to root directory and run this command for start php server
+Go to /client directory and run this command for start php server
 ```bash
   php -S localhost:8000
 ```
