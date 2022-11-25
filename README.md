@@ -7,9 +7,9 @@ Go to /client and Install package form package.json
 ```
 
 Go to /server and run this command make sure you have Docker on your machine
-Docker image used in this project
+(Docker image used in this project
 
-[MySQL](https://hub.docker.com/_/mysql) and [PhpMyAdmin](https://hub.docker.com/_/phpmyadmin)
+[MySQL](https://hub.docker.com/_/mysql) and [PhpMyAdmin](https://hub.docker.com/_/phpmyadmin))
 
 ```bash
   docker-compose up -d
