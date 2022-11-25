@@ -18,6 +18,7 @@ phpmyadmin will be runing at
 <http://localhost:8080/>
 
 Go to your browser and type [http://localhost:8080/](http://localhost:8080/) User = root ,password is “CSS326” for access to phpmyadmin
+here you can import database from file "coffee_shop.sql"
 
 to connect to database don’t forget to install php-MySQL
 phpmyadmin will be runing at
