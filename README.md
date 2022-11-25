@@ -28,3 +28,4 @@ Go to root directory and run this command for start php server
   php -S localhost:8000
 ```
 you can choose any free port
+go to <http://localhost:8000/> to view our website
