@@ -1,4 +1,4 @@
-# CSS32_Project
+# Coffee ordering application CSS32_inClass_Project
 
 Go to /client and Install package form package.json 
 
